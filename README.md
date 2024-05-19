@@ -8,7 +8,7 @@ Welcome to my Python Projects Repository! This repository contains a collection 
    - A simple calculator with a graphical user interface built using Tkinter.
    - Supports basic arithmetic operations, clearing the input field, and deleting the last character.
    - Multi-language support: English, Czech, Polish, and Slovak.
-   - [Detailed README](Lukyzelva-Python-Projects/Calculator/README.md)
+   - [Detailed README](Calculator/README.md)
 
 2. **10 CPS Autoclicker** 📊
    - an autoclicker 
