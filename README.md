@@ -14,10 +14,6 @@ Welcome to my Python Projects Repository! This repository contains a collection 
    - an autoclicker 
    - [Detailed README](projects/project2/README.md)
 
-3. **Project 3** 📈
-   - Description of Project 3.
-   - [Detailed README](projects/project3/README.md)
-
 ## 🌟 Features
 
 - A variety of Python projects showcasing different aspects of programming.
