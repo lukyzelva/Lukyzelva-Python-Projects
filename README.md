@@ -12,7 +12,7 @@ Welcome to my Python Projects Repository! This repository contains a collection 
 
 2. **10 CPS Autoclicker** 📊
    - an autoclicker 
-   - [Detailed README](projects/project2/README.md)
+   - [Detailed README](Autoclicker/Readme.md)
 
 ## 🌟 Features
 
