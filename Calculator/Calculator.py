@@ -36,11 +36,11 @@ def change_language(language):
         window.title("Kalkulačka")
         messagebox.showinfo("Zmena jazyka", "Jazyk zmenený na slovenčinu")
 
-# Vytvoření okna
+# Create window
 window = tk.Tk()
 window.title("Calculator")
 
-# Výběr jazyka při spuštění
+# Language selection on startup
 language_choice = tk.StringVar()
 language_choice.set("English")
 
@@ -50,41 +50,42 @@ language_label.grid(row=0, column=0, columnspan=2)
 language_menu = tk.OptionMenu(window, language_choice, "English", "Czech", "Polish", "Slovak", command=change_language)
 language_menu.grid(row=0, column=2, columnspan=2)
 
-# Vytvoření vstupního pole
+# Create entry field
 entry = tk.Entry(window, width=30, font=("Arial", 14))
 entry.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
 
-# Vytvoření tlačítek pro čísla a operace
+# Create buttons for numbers and operations
 buttons = [
-    '7', '8', '9', '/',
-    '4', '5', '6', '*',
-    '1', '2', '3', '-',
-    '0', '.', '=', '+'
+    '7', '8', '9', '/', '(',
+    '4', '5', '6', '*', ')',
+    '1', '2', '3', '-', '',
+    '0', '.', '+'
 ]
 
 row = 2
 col = 0
 for button in buttons:
-    tk.Button(window, text=button, width=5, font=("Arial", 14), command=lambda b=button: entry.insert(tk.END, b)).grid(row=row, column=col, padx=5, pady=5)
+    if button:  # Only create buttons with text
+        tk.Button(window, text=button, width=5, font=("Arial", 14), command=lambda b=button: entry.insert(tk.END, b)).grid(row=row, column=col, padx=5, pady=5)
     col += 1
-    if col > 3:
+    if col > 4:
         col = 0
         row += 1
 
-# Vytvoření tlačítka pro výpočet
+# Create button for calculation
 tk.Button(window, text="=", width=5, font=("Arial", 14), command=evaluate_expression).grid(row=6, column=0, columnspan=4, padx=10, pady=10)
 
-# Vytvoření tlačítka pro vynulování
+# Create button for clearing entry
 tk.Button(window, text="C", width=5, font=("Arial", 14), command=clear_entry).grid(row=7, column=0, columnspan=2, padx=10, pady=10)
 
-# Vytvoření tlačítka pro vymazání posledního znaku
+# Create button for deleting last character
 tk.Button(window, text="C1", width=5, font=("Arial", 14), command=delete_last_char).grid(row=7, column=2, columnspan=2, padx=10, pady=10)
 
-# Vytvoření proměnné pro výsledek
+# Create variable for result
 result = tk.StringVar()
 result.set("")
 
-# Vytvoření pole pro zobrazení výsledku
+# Create label for displaying result
 result_label = tk.Label(window, textvariable=result, font=("Arial", 14))
 result_label.grid(row=8, column=0, columnspan=4, padx=10, pady=10)
 
