@@ -5,6 +5,7 @@ A simple calculator with a user interface created in Python using the Tkinter li
 ## 📋 Features
 
 - Basic arithmetic operations (+, -, *, /)
+- Brackets
 - Clearing the input field
 - Deleting the last character in the input field
 - Calculating expressions by pressing the "=" button
