@@ -11,7 +11,8 @@ Welcome to my Python Projects Repository! This repository contains a collection 
    - [Detailed README](Calculator/Readme.md)
 
 2. **10 CPS Autoclicker** 📊
-   - an autoclicker 
+   - Autoclicker that can do 10 clicks per second
+   - Multiple languages
    - [Detailed README](Autoclicker/Readme.md)
 
 ## 🌟 Features
